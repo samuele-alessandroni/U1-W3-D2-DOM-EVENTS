@@ -177,20 +177,156 @@
        Scrivi una funzione che rimuova l'ultima lettera dall'h1 ogni volta che l'utente lo clicca
       */
 
-      const makeItClickable = function () {}
+        const makeItClickable = function () {
+        let h1 = document.getElementsByTagName("h1")[0]
+        h1.style.cursor = "pointer"
+        h1.onclick = function(){
+          let remove = h1.innerText.substring(0, h1.innerText.length - 1)
+          h1.innerText = remove
+        }
+       
+      }
+
+      makeItClickable()
 
       /* ESERCIZIO 10
        Crea una funzione che, al click sul footer, riveli l'URL del link interno come contenuto di un alert()
       */
 
-      const revealFooterLink = function () {}
+      const revealFooterLink = function () {
+        const aForLink = document.querySelector("footer a")
+        const footerClick = document.getElementsByTagName("footer")[0]
 
+        
+        footerClick.style.cursor = "pointer"
+        
+        footerClick.onclick = function () {
+          window.alert(aForLink.href)
+        }
+      }
+
+      revealFooterLink()
       /* ESERCIZIO 11
        Crea una funzione che crei una tabella nell'elemento con id "tableArea". 
        La tabella avrà 5 elementi e questa struttura: immagine, nome prodotto, quantità, prezzo
     */
 
-      const generateTable = function () {}
+      const generateTable = function () {
+        const footer = document.getElementsByTagName("footer")[0]
+        const table = document.createElement("table")
+        const trHead = document.createElement("tr")
+        const trBodyFirstLine = document.createElement("tr")
+        const trBodySecondLine = document.createElement("tr")
+        const trBodyThirdLine = document.createElement("tr")
+        const trBodyFourthLine = document.createElement("tr")
+        const trBodyFifthLine = document.createElement("tr")
+
+        const thHeadImmagine = document.createElement("th")
+        const thHeadNomeProdotto = document.createElement("th")
+        const thHeadQuantita = document.createElement("th")
+        const thHeadPrezzo = document.createElement("th")
+
+        const tdBodyFirstLineCell1 = document.createElement("td")
+        const tdBodyFirstLineCell2 = document.createElement("td")
+        const tdBodyFirstLineCell3 = document.createElement("td")
+        const tdBodyFirstLineCell4 = document.createElement("td")
+
+        const tdBodySecondLineCell1 = document.createElement("td")
+        const tdBodySecondLineCell2 = document.createElement("td")
+        const tdBodySecondLineCell3 = document.createElement("td")
+        const tdBodySecondLineCell4 = document.createElement("td")
+
+        const tdBodyThirdLineCell1 = document.createElement("td")
+        const tdBodyThirdLineCell2 = document.createElement("td")
+        const tdBodyThirdLineCell3 = document.createElement("td")
+        const tdBodyThirdLineCell4 = document.createElement("td")
+
+        const tdBodyFourthLineCell1 = document.createElement("td")
+        const tdBodyFourthLineCell2 = document.createElement("td")
+        const tdBodyFourthLineCell3 = document.createElement("td")
+        const tdBodyFourthLineCell4 = document.createElement("td")
+
+        const tdBodyFifthLineCell1 = document.createElement("td")
+        const tdBodyFifthLineCell2 = document.createElement("td")
+        const tdBodyFifthLineCell3 = document.createElement("td")
+        const tdBodyFifthLineCell4 = document.createElement("td")
+        
+        thHeadImmagine.innerText = "Immagine" 
+        thHeadNomeProdotto.innerText = "Nome prodotto" 
+        thHeadQuantita.innerText = "Quantità" 
+        thHeadPrezzo.innerText = "Prezzo" 
+
+        
+        thHeadImmagine.innerText = "Immagine" 
+        thHeadNomeProdotto.innerText = "nome prodotto" 
+        thHeadQuantita.innerText = "quantità" 
+        thHeadPrezzo.innerText = "prezzo" 
+        
+        tdBodyFirstLineCell1.innerText = "ffff"
+        tdBodyFirstLineCell2.innerText = "gggg"
+        tdBodyFirstLineCell3.innerText = "hhhhh"
+        tdBodyFirstLineCell4.innerText = "jjjjj"
+
+        tdBodySecondLineCell1.innerText = "ffff"
+        tdBodySecondLineCell2.innerText = "gggg"
+        tdBodySecondLineCell3.innerText = "hhhhh"
+        tdBodySecondLineCell4.innerText = "jjjjj"
+
+        tdBodyThirdLineCell1.innerText = "ffff"
+        tdBodyThirdLineCell2.innerText = "gggg"
+        tdBodyThirdLineCell3.innerText = "hhhhh"
+        tdBodyThirdLineCell4.innerText = "jjjjj"
+
+        tdBodyFourthLineCell1.innerText = "ffff"
+        tdBodyFourthLineCell2.innerText = "gggg"
+        tdBodyFourthLineCell3.innerText = "hhhhh"
+        tdBodyFourthLineCell4.innerText = "jjjjj"
+
+        tdBodyFifthLineCell1.innerText = "ffff"
+        tdBodyFifthLineCell2.innerText = "gggg"
+        tdBodyFifthLineCell3.innerText = "hhhhh"
+        tdBodyFifthLineCell4.innerText = "jjjjj"
+
+        trHead.appendChild(thHeadImmagine)
+        trHead.appendChild(thHeadNomeProdotto)
+        trHead.appendChild(thHeadQuantita)
+        trHead.appendChild(thHeadPrezzo)
+
+        trBodyFirstLine.appendChild(tdBodyFirstLineCell1)
+        trBodyFirstLine.appendChild(tdBodyFirstLineCell2)
+        trBodyFirstLine.appendChild(tdBodyFirstLineCell3)
+        trBodyFirstLine.appendChild(tdBodyFirstLineCell4)
+
+        trBodySecondLine.appendChild(tdBodySecondLineCell1)
+        trBodySecondLine.appendChild(tdBodySecondLineCell2)
+        trBodySecondLine.appendChild(tdBodySecondLineCell3)
+        trBodySecondLine.appendChild(tdBodySecondLineCell4)
+
+        trBodyThirdLine.appendChild(tdBodyThirdLineCell1)
+        trBodyThirdLine.appendChild(tdBodyThirdLineCell2)
+        trBodyThirdLine.appendChild(tdBodyThirdLineCell3)
+        trBodyThirdLine.appendChild(tdBodyThirdLineCell4)
+
+        trBodyFourthLine.appendChild(tdBodyFourthLineCell1)
+        trBodyFourthLine.appendChild(tdBodyFourthLineCell2)
+        trBodyFourthLine.appendChild(tdBodyFourthLineCell3)
+        trBodyFourthLine.appendChild(tdBodyFourthLineCell4)
+
+        trBodyFifthLine.appendChild(tdBodyFifthLineCell1)
+        trBodyFifthLine.appendChild(tdBodyFifthLineCell2)
+        trBodyFifthLine.appendChild(tdBodyFifthLineCell3)
+        trBodyFifthLine.appendChild(tdBodyFifthLineCell4)
+
+        table.appendChild(trHead)
+        table.appendChild(trBodyFirstLine)
+        table.appendChild(trBodySecondLine)
+        table.appendChild(trBodyThirdLine)
+        table.appendChild(trBodyFourthLine)
+        table.appendChild(trBodyFifthLine)
+        document.body.insertBefore(table, footer)
+      }
+
+      generateTable()
 
       /* ESERCIZIO 12
        Crea una funzione che aggiunga una riga alla tabella precedentemente creata e fornisca i dati necessari come parametri
